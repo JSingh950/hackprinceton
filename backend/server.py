@@ -1,6 +1,6 @@
 """
 Rewind — FastAPI server on the Pi (starter)
-Owner: Ariji
+Owner: Jossue
 
 Run:   uvicorn server:app --host 0.0.0.0 --port 8000
 Deps:  fastapi, uvicorn, httpx, anthropic, python-dotenv

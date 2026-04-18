@@ -1,6 +1,6 @@
 """
 Rewind — Query engine (starter)
-Owner: Ariji
+Owner: Jossue
 
 Run:   python query.py "where did I leave my keys"
 Deps:  anthropic, httpx, python-dotenv

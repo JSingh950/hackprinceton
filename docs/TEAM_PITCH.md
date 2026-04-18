@@ -18,9 +18,9 @@
 >
 > **Roles:**
 > - **Sunghoo:** the whole CV stack on the Pi — YOLO + ByteTrack + action rules + events + SQLite. He owns the vision pipeline.
-> - **Ariji:** the AI layer — LLM query engine with K2 primary and Claude failover, the proactive Eragon agent, the FastAPI server on the Pi.
+> - **Me (team lead):** the AI layer — LLM query engine with K2 primary and Claude failover, the proactive Eragon agent, the FastAPI server on the Pi. Also the demo script, pitch, and Devpost submission.
 > - **Jeeyan:** the frontend — Next.js command center on the laptop with live event timeline, query UI, and Web Speech API for voice in/out. The laptop's own mic and speaker handle all audio.
-> - **Me:** hardware integration — SenseCAP LVGL firmware, Grove button/LED wiring, enclosure, demo script, pitch, submissions.
+> - **Ariji:** hardware integration — SenseCAP LVGL firmware, Grove button/LED wiring, cardboard enclosure, privacy-shutter servo, MLH hardware pickup.
 >
 > **Key architectural call: no USB mic, no Echo Dot, no Nest Mini.** The laptop already sits next to the device as our command center. Its browser handles speech-to-text and text-to-speech via the Web Speech API — free, local, no setup, no Bluetooth flakiness.
 >

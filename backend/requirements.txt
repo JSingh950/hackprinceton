@@ -1,4 +1,4 @@
-# FastAPI server + LLM query layer deps (Ariji)
+# FastAPI server + LLM query layer deps (Jossue)
 # Install:
 #   python -m venv .venv && source .venv/bin/activate
 #   pip install -r requirements.txt

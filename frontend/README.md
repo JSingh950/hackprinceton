@@ -76,4 +76,4 @@ type Alert    = { severity, title, body, suggested_action? };
 
 ## Fallback: mobile web view
 
-If the SenseCAP firmware doesn't ship (Jossue's fallback plan), this dashboard becomes the device's face via a phone stand. The layout already responds — test at ~375 px width once on Saturday. A stripped-down `/status` route can be added in 20 min if needed.
+If the SenseCAP firmware doesn't ship (Ariji's fallback plan), this dashboard becomes the device's face via a phone stand. The layout already responds — test at ~375 px width once on Saturday. A stripped-down `/status` route can be added in 20 min if needed.

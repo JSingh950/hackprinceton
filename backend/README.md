@@ -1,6 +1,6 @@
 # Backend — FastAPI + LLM layer
 
-**Owner: Ariji.** FastAPI server running on the Raspberry Pi alongside `capture.py`. Handles the dashboard's reads, the LLM reasoning for queries, and the proactive caregiver agent.
+**Owner: Jossue.** FastAPI server running on the Raspberry Pi alongside `capture.py`. Handles the dashboard's reads, the LLM reasoning for queries, and the proactive caregiver agent.
 
 ---
 

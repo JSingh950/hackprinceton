@@ -69,12 +69,12 @@ This problem has a name in the research literature: **Episodic Memory Question A
 
 | Member | Background | Role in Rewind |
 |---|---|---|
-| **[You]** | Team lead, hackathon vet | **Hardware + Product + Pitch.** SenseCAP LVGL firmware, Grove wiring, enclosure, Devpost, demo script, track submissions. |
-| **Ariji Chakma** | CS researcher at Drexel (2D/3D/4D gen, LLMs, HCI) | **LLM & agent layer.** Query engine with K2 + Claude failover, Eragon proactive agent, FastAPI server on Pi. |
+| **[You] (Jossue)** | Team lead, hackathon vet | **LLM & agent layer + Product + Pitch.** Query engine with K2 + Claude failover, Eragon proactive agent, FastAPI server on Pi. Also Devpost, demo script, track submissions. |
+| **Ariji Chakma** | CS researcher at Drexel (2D/3D/4D gen, LLMs, HCI) | **Hardware integration.** SenseCAP LVGL firmware, Grove button/LED wiring, cardboard enclosure, privacy-shutter servo, MLH hardware pickup. |
 | **Sunghoo Jung** | Rutgers, Math+CS, Rail Lab (edge ML, fault-tolerant ML, ResNet, real-time safety-critical systems) | **Computer vision stack.** Full CV pipeline: YOLOv8 detection + ByteTrack object persistence + simple action recognition rules + event extractor + SQLite log. He owns the Pi brain. |
 | **Jeeyan** | Frontend | **Frontend + UX.** Next.js command center, live event timeline, query interface (text + Web Speech API for voice), answer card + TTS playback, demo visuals. |
 
-> Kaijie is no longer on the team. His original LLM scope went to Ariji.
+> Kaijie is no longer on the team — his original LLM scope initially went to Ariji, and has since been swapped so Jossue owns the LLM/backend layer and Ariji owns the hardware integration.
 
 ---
 
@@ -124,7 +124,7 @@ One build aimed at 5–7 prizes. Alignment is natural, not forced.
 │   │  └─ blurred 128×72    │                              │
 │   │     thumbnails        │                              │
 │   │                       │                              │
-│   │  [Ariji]              │                              │
+│   │  [Jossue]             │                              │
 │   │  ├─ FastAPI server    │                              │
 │   │  ├─ WS /ws/events     │                              │
 │   │  ├─ POST /query       │                              │
@@ -264,7 +264,7 @@ One build aimed at 5–7 prizes. Alignment is natural, not forced.
   - `gpiozero` — Grove button/LED via GPIO
 - **No audio dependencies** — Pi doesn't handle audio. Saves ~4 hours of PyAudio hell.
 
-### Cloud (Ariji's territory)
+### Cloud (Jossue's territory)
 - **Primary LLM:** K2 Think V2 (for MBZUAI track pitch). Structured JSON output.
 - **Failover LLM:** Claude 4.7 (`claude-opus-4-7`). Wired from day one. One env var flip.
 - **Agent drafts:** Claude 4.7 (better at tactful SMS tone than K2).
@@ -298,18 +298,18 @@ One build aimed at 5–7 prizes. Alignment is natural, not forced.
 | Owner | Deliverable by 2 AM |
 |---|---|
 | **Sunghoo** | Pi boots. Webcam captures @5fps. YOLOv8-nano + ByteTrack giving persistent IDs. Event extractor emits clean JSON events to stdout + SQLite. Blurred thumbnails saved. Hero objects tuned: phone, bottle, cup, book, remote. |
-| **Ariji** | `query.py` standalone: takes JSON event log + question, returns structured answer. Works against K2 (if endpoint ready) and Claude failover. Tested on 5 synthetic event logs. FastAPI skeleton running. |
+| **Jossue** | `query.py` standalone: takes JSON event log + question, returns structured answer. Works against K2 (if endpoint ready) and Claude failover. Tested on 5 synthetic event logs. FastAPI skeleton running. Devpost draft started. |
 | **Jeeyan** | Next.js scaffold running. Three-panel layout. Live event timeline driven by mock WebSocket. Answer card. Web Speech API integrated (mic button works in Chrome; TTS reads answer card aloud). Looks *startup-polished*. |
-| **You** | SenseCAP firmware flashed with 4-state UI. Grove button + LED wired to Pi via Grove HAT. Cardboard enclosure sketched and materials claimed. Devpost draft started. |
+| **Ariji** | SenseCAP firmware flashed with 4-state UI. Grove button + LED wired to Pi via Grove HAT. Cardboard enclosure sketched and materials claimed. MLH hardware pickup done. |
 
 ### Phase 2 — FIRST FUSION (Sat 8 AM → 1 PM, ~5 hrs)
 
 | Task | Owner |
 |---|---|
 | Sunghoo's SQLite events → Jeeyan's live timeline via WebSocket | Sunghoo + Jeeyan |
-| Jeeyan's query input (voice or text) → Ariji's query endpoint → answer card + TTS | Ariji + Jeeyan |
-| Pi ↔ SenseCAP serial working (real events drive screen states) | You + Sunghoo |
-| Device assembled in enclosure, wall-mount works, looks clean | You |
+| Jeeyan's query input (voice or text) → backend query endpoint → answer card + TTS | Jossue + Jeeyan |
+| Pi ↔ SenseCAP serial working (real events drive screen states) | Ariji + Sunghoo |
+| Device assembled in enclosure, wall-mount works, looks clean | Ariji |
 | **Checkpoint @ 1 PM:** judge places keys, presses Grove button, speaks into laptop, gets correct spoken answer + SenseCAP text. If yes → on track. If no → cut voice, fall back to typed-only, keep moving. | All |
 
 ### Phase 3 — HERO MOMENTS (Sat 1 PM → 7 PM, ~6 hrs)
@@ -350,7 +350,7 @@ One build aimed at 5–7 prizes. Alignment is natural, not forced.
 
 ---
 
-## 🧠 Prompt Template (for Ariji)
+## 🧠 Prompt Template (for Jossue)
 
 ### System prompt
 ```

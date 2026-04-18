@@ -15,9 +15,9 @@ Jump straight into your folder. Each has a focused README with "what you own, ho
 | Owner | Folder | What it is |
 |---|---|---|
 | **Sunghoo** | [`pi/`](./pi) | CV pipeline on the Raspberry Pi — YOLOv8 + ByteTrack + event extractor + SQLite log |
-| **Ariji** | [`backend/`](./backend) | FastAPI server + LLM query layer (K2 primary, Claude failover) + Eragon proactive agent |
+| **Jossue** *(team lead)* | [`backend/`](./backend) | FastAPI server + LLM query layer (K2 primary, Claude failover) + Eragon proactive agent. Also owns Devpost, demo script, pitch. |
 | **Jeeyan** | [`frontend/`](./frontend) | Next.js 14 command center — live event timeline, Web Speech voice I/O, agent alerts |
-| **Team lead (Jossue)** | [`sensecap/`](./sensecap) | SenseCAP Indicator LVGL firmware (4-state ambient display) |
+| **Ariji** | [`sensecap/`](./sensecap) + hardware | SenseCAP Indicator LVGL firmware (4-state ambient display), Grove button/LED wiring, cardboard enclosure, MLH hardware pickup |
 
 **Shared references** (read once, return when needed):
 
@@ -64,7 +64,7 @@ cp .env.example frontend/.env.local        # or cp frontend/.env.local.example
 
 Then jump to your folder's README and follow its Run section.
 
-**Backend + Pi (Ariji + Sunghoo share the Pi):**
+**Backend + Pi (Jossue + Sunghoo share the Pi):**
 
 ```bash
 # Backend

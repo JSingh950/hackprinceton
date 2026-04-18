@@ -29,7 +29,7 @@ from ultralytics import YOLO
 DB_PATH = Path("rewind.db")
 THUMB_DIR = Path("thumbs")
 THUMB_DIR.mkdir(exist_ok=True)
-SERVER_BASE = "http://127.0.0.1:8000"  # Ariji's FastAPI
+SERVER_BASE = "http://127.0.0.1:8000"  # Jossue's FastAPI
 
 # Hero objects: YOLO COCO labels we care about, with per-label confidence floor.
 # Tune Saturday on exactly these objects in venue lighting.

@@ -55,7 +55,7 @@ Defined in `capture.py` at `HERO_OBJECTS`. We use COCO stand-ins for objects COC
 
 Debounced 8 s on drinking so we don't spam the log.
 
-## Integration contract (don't change without pinging Ariji)
+## Integration contract (don't change without pinging Jossue)
 
 `capture.py` writes each event to `rewind.db` then POSTs it to the backend so the dashboard sees it live:
 

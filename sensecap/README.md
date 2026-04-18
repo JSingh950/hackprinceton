@@ -1,6 +1,8 @@
 # SenseCAP — LVGL firmware
 
-**Owner: Jossue (team lead).** Custom ESP-IDF + LVGL firmware for the SenseCAP Indicator. Ambient display: idle → listening → thinking → answer. Driven by JSON-lines over USB serial from the Pi.
+**Owner: Ariji.** Custom ESP-IDF + LVGL firmware for the SenseCAP Indicator, plus the wider hardware integration (Grove button/LED via the Pi's GPIO, cardboard enclosure, privacy-shutter servo, MLH hardware pickup). Ambient display: idle → listening → thinking → answer. Driven by JSON-lines over USB serial from the Pi.
+
+> Jossue (team lead) owns Devpost, demo script, track submissions, and the overall pitch — ping him on anything that touches those.
 
 ---
 

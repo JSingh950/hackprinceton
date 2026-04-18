@@ -1,6 +1,6 @@
 """
 Rewind — Proactive caregiver agent (starter)
-Owner: Ariji (stretch — Saturday afternoon)
+Owner: Jossue (stretch — Saturday afternoon)
 
 Wins the Eragon Mac Mini track:
 - Reads event log (Rewind) + mock calendar + mock contacts
