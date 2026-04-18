@@ -1,0 +1,15 @@
+# Pi-side CV pipeline deps (Sunghoo)
+# Install on the Pi:
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+# On Pi OS Bookworm you may need --break-system-packages if not using a venv.
+
+# Frame capture + processing
+opencv-python>=4.9
+numpy>=1.26
+
+# Detection + tracking (YOLOv8-nano + built-in ByteTrack)
+ultralytics>=8.1.0
+
+# Broadcast events back to the FastAPI server
+httpx>=0.27
